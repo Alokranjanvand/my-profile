@@ -3,65 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node.js Developer - Profile</title>
+    <title>Node.js Developer - Portfolio</title>
     <style>
-      body {
+        /* Global Styles */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #181818;
+    background: #121212;
     color: #fff;
 }
 
-.container {
-    text-align: center;
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #00ff99;
-    margin-bottom: 10px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff99;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('profile.jpg') no-repeat center/cover;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: #00ff99;
 }
 
-.social-links a {
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #00ff99;
+}
+
+/* Skills */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background: #1e1e1e;
+    border-radius: 5px;
+}
+
+/* Projects */
+.project-card {
+    background: #1e1e1e;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Contact */
+#contact a {
     color: #00ff99;
     text-decoration: none;
-    margin: 10px;
-    font-size: 1.2rem;
 }
 
-.social-links a:hover {
-    color: #ffcc00;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1e1e1e;
+    position: relative;
 }
 
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile">
-            <img src="profile.jpg" alt="Your Name">
+    <header>
+        <div class="logo">Node.js Dev</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
             <h1>Hi, I'm <span class="typing"></span></h1>
-            <p>Passionate Node.js Developer | API Expert | WebRTC Enthusiast</p>
-            <div class="social-links">
-                <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-                <a href="mailto:your@email.com">Email</a>
-            </div>
+            <p>Node.js Developer | API Expert | WebRTC Enthusiast</p>
+            <a href="#contact" class="btn">Hire Me</a>
         </div>
-    </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate Node.js Developer with expertise in building scalable applications, real-time systems, and API development.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>WebRTC</li>
+            <li>Socket.io</li>
+            <li>MongoDB / MySQL</li>
+            <li>REST & GraphQL APIs</li>
+            <li>AWS / Firebase</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Real-Time Chat App</h3>
+            <p>A WebRTC-based chat app with video calling.</p>
+        </div>
+        <div class="project-card">
+            <h3>API Gateway</h3>
+            <p>A scalable API gateway using Node.js and Express.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: your@email.com</p>
+        <p>GitHub: <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub Profile</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn Profile</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Node.js Developer Portfolio</p>
+    </footer>
 
     <script>
-      const text = "a Node.js Developer";
+        const text = "a Node.js Developer";
 let index = 0;
 
 function typeEffect() {
