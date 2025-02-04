@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Developer - Profile</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #181818;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #00ff99;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.social-links a {
+    color: #00ff99;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="profile">
+            <img src="profile.jpg" alt="Your Name">
+            <h1>Hi, I'm <span class="typing"></span></h1>
+            <p>Passionate Node.js Developer | API Expert | WebRTC Enthusiast</p>
+            <div class="social-links">
+                <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+                <a href="mailto:your@email.com">Email</a>
+            </div>
+        </div>
+    </div>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <script>
+      const text = "a Node.js Developer";
+let index = 0;
 
+function typeEffect() {
+    document.querySelector(".typing").textContent = text.slice(0, index);
+    index++;
+
+    if (index <= text.length) {
+        setTimeout(typeEffect, 150);
+    }
+}
+
+typeEffect();
+
+    </script>
 </body>
 </html>
-
-
